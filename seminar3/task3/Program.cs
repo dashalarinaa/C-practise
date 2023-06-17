@@ -8,9 +8,8 @@ int N = int.Parse(Console.ReadLine());
 
 int count = 1;
 
-while ( count <= N)
+while ( count < N)
 {
-    double result = Math.Pow(count, 2);
     count++;
-    Console.WriteLine($"{result}");
+    Console.WriteLine(count * count);
 }

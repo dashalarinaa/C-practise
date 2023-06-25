@@ -11,7 +11,7 @@ int i_1 = number / 10000;
 int i_5 = number % 10;
 int i_2 = (number / 1000) % 10;
 int i_4 = (number % 100) / 10;
-if (number >= 10000)
+if (Math.Abs(number) >= 10000 || Math.Abs(number) <=99999)
 {
     if (i_1 == i_5 && i_2 == i_4) 
     {

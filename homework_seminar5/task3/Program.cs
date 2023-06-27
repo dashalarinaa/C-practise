@@ -25,5 +25,3 @@ for (int i = 0; i < array.Length; i++)
 }
 Console.WriteLine($" Максимальное значение = {max}, минимальное значение = {min}");
 Console.WriteLine($"Разница между максимальным и минимальным значением = {max - min}");
-
- // int diff = max - min; Console.WriteLine($" Разница между максимальным и минимальным элементом массива равно {diff}");

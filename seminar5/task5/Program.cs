@@ -38,8 +38,7 @@ while (count <= size)
     }
 index++;
 count++;
-size++;
-
+size--;
 }
 
 // дорешать эту задачу!!!!!

@@ -15,6 +15,7 @@ for (int i = 0; i < array.Length; i++)
     if (i % 2 != 0)
     {
         sum = sum + array[i];
-        Console.WriteLine($"Cумма элементов, стоящих на нечётных позициях = {sum}");
+        
     }
 }
+Console.WriteLine($"Cумма элементов, стоящих на нечётных позициях = {sum}");

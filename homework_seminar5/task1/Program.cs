@@ -15,6 +15,7 @@ for (int i = 0; i < array.Length; i++)
     if (array[i] % 2 == 0)
     {
         count++;
-        Console.WriteLine($"Количество четных чисел в массиве = {count}");
+        
     }
 }
+Console.WriteLine($"Количество четных чисел в массиве = {count}");

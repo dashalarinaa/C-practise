@@ -5,6 +5,9 @@ int m = Convert.ToInt32(Console.ReadLine());
 System.Console.Write("Enter num columns: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
+
+Console.WriteLine();
+
 void PrintArray(int [,] matr)
 {
 for (int i = 0; i < m; i++)
@@ -34,7 +37,7 @@ FillArray(matrix);
 PrintArray(matrix);
 Console.WriteLine("");
 
-void GetSumRow(int [,] matr)
+int GetSumRow(int [,] matr)
 {
     int[] sum = new int [m];
 for (int i = 0; i < m; i++)
@@ -44,10 +47,23 @@ for (int i = 0; i < m; i++)
         sum[i] = sum[i] + matr[i,j];
         
     }
-     Console.Write(sum[i] + " ");
+    Console.Write(sum[i] + " ");
+    
 } 
+Console.WriteLine("");
+int minSum = sum[0];
+int minRow = 1;
+for (int i = 0; i < m; i++)
+{
+    if (sum[i] < minSum)
+    {
+        minSum = sum[i];
+        minRow = i + 1;
+    }
 }
-GetSumRow(matrix);
+return minRow;
+}
 
-
+int row = GetSumRow(matrix);
+Console.WriteLine($"Наименьшая сумма чисел находится в строке {row}");
 

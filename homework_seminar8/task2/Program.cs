@@ -8,6 +8,8 @@ int n = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine();
 
+if (m != n)
+{
 void PrintArray(int [,] matr)
 {
 for (int i = 0; i < m; i++)
@@ -66,4 +68,8 @@ return minRow;
 
 int row = GetSumRow(matrix);
 Console.WriteLine($"Наименьшая сумма чисел находится в строке {row}");
-
+}
+else
+{
+    Console.WriteLine("Числа не должны быть равными");
+}

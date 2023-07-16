@@ -66,7 +66,7 @@ FillArray2(matrix2);
 PrintArray2(matrix2);
 Console.WriteLine("");
 
- void Multiplication(int[,] matrixA, int[,] matrixB)
+ int Multiplication(int[,] matrixA, int[,] matrixB)
     
     {  
         if (matrixA.GetLength(0) != matrixB.GetLength(1))
@@ -75,7 +75,7 @@ Console.WriteLine("");
     }     
         int matrixC = new int[matrixA.GetLength(0), matrixB.GetLength(1)];
 
-        for (int i = 0; i < GetLength(0); i++)
+        for (int i = 0; i < matrixA.GetLength(0); i++)
         {
             for (int j = 0; j < matrixB.GetLength(1); j++)
             {
@@ -83,14 +83,15 @@ Console.WriteLine("");
 
                 for (int k = 0; k < matrixA.GetLength(0); k++)
                 {
-                    matrixC[i, j] = matrixC[i, j] + matrixA[i, k] * matrixB[k, j];
+                    int A = matrixA[i, k];
+                    int B = matrixB[k, j];
+                    matrixC[i, j] = matrixC[i, j] + A * B;
                 }
             }
         }
-
+            
         return matrixC;
     }
-var A = matrix1[m,n];
-var B = matrix2[m2,n2];
-var result = Multiplication(A, B);
+
+int result = Multiplication(matrix1, matrix2);
 Console.WriteLine(result);

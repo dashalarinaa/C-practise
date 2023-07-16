@@ -1,14 +1,18 @@
-﻿//Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
-// 452 -> 11
-// 82 -> 10
-// 9012 -> 12
+﻿// Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
 
-int GetRecSum(int number)
+Console.Write("Введи целое число: ");
+int number = int.Parse(Console.ReadLine());
+Console.Write("Введи целое число: ");
+int number_2 = int.Parse(Console.ReadLine());
+
+int GetSum(int M, int N)
 {
-if (number == 0) return 0;
-int temp = number % 10 + GetRecSum(number / 10);
-return temp;
+    if (M == N) return M;
+    int temp = M + GetSum(M+1, N);
+    return temp;
 }
-Console.Write("Введи число: ");
-int input_number = int.Parse(Console.ReadLine());
-Console.WriteLine(GetRecSum(input_number));
+
+int sum = GetSum(number, number_2);
+Console.WriteLine(sum);
